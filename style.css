@@ -128,3 +128,22 @@ main {
     width: 100%;
   }
 }
+
+@media screen and (min-width: 480px) {
+  .content h2 {
+    font-size: 1.7em;
+  }
+
+  .content p {
+    font-size: 1.05em;
+    padding: 0 20px;
+  }
+
+  .logo {
+    max-width: 180px;
+  }
+
+  main {
+    padding: 30px 15px;
+  }
+}
