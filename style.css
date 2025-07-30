@@ -1,4 +1,4 @@
-/* Applique une police propre et une base de style */
+
 body {
   margin: 0;
   padding: 0;
@@ -10,11 +10,11 @@ header {
   background: linear-gradient(to right, #ce1126, #fcd116, #009e49);
   color: white;
   text-align: center;
-  padding: 30px 20px;
+  padding: 20px 10px; 
+  font-size: 1.2em;   
 }
 
 
-/* Barre de navigation */
 nav {
   background-color: #006400;
 }
@@ -24,16 +24,20 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column; 
+  align-items: center;    
   justify-content: center;
 }
 
 nav ul li {
   position: relative;
+  width: 100%;      
+  text-align: center; 
 }
 
 nav ul li a {
   display: block;
-  padding: 15px 20px;
+  padding: 12px;      
   color: white;
   text-decoration: none;
   transition: background-color 0.3s;
@@ -46,7 +50,8 @@ nav ul li:hover {
 /* Sous-menu déroulant */
 nav ul li ul {
   display: none;
-  position: absolute;
+  position: static; 
+  width: 100%;      
   background-color: #006400;
   top: 100%;
   left: 0;
@@ -65,21 +70,22 @@ nav ul li ul li a {
 
 /* Contenu principal */
 main {
-  padding: 40px 20px;
+  padding: 20px 10px; 
   text-align: center;
 }
 
 .content h2 {
   color: #006400;
-  font-size: 2em;
+  font-size: 1.5em; 
   margin-bottom: 10px;
 }
 
 .content p {
-  font-size: 1.1em;
+  font-size: 1em;    
   color: #333;
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 10px;   
 }
 
 .logo {
@@ -89,61 +95,52 @@ main {
   margin: 0 auto 20px auto;
 }
 
-/* RESPONSIVE : pour écran < 768px */
-@media screen and (max-width: 768px) {
-  header {
-    padding: 20px 10px;
-    font-size: 1.2em;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  nav ul li a {
-    padding: 12px;
-  }
-
-  main {
-    padding: 20px 10px;
-  }
-
-  .content h2 {
-    font-size: 1.5em;
-  }
-
-  .content p {
-    font-size: 1em;
-    padding: 0 10px;
-  }
-
-  nav ul li ul {
-    position: static;
-    width: 100%;
-  }
-}
-
+/* TABLETTE : min-width 480px */
 @media screen and (min-width: 480px) {
   .content h2 {
     font-size: 1.7em;
   }
-
   .content p {
     font-size: 1.05em;
     padding: 0 20px;
   }
-
   .logo {
     max-width: 180px;
   }
-
   main {
     padding: 30px 15px;
+  }
+}
+
+/* DESKTOP : min-width 768px */
+@media screen and (min-width: 768px) {
+  header {
+    padding: 30px 20px;
+    font-size: 2em;
+  }
+  nav ul {
+    flex-direction: row;
+    align-items: unset;
+  }
+  nav ul li {
+    width: auto;
+    text-align: left;
+  }
+  nav ul li a {
+    padding: 15px 20px;
+  }
+  main {
+    padding: 40px 20px;
+  }
+  .content h2 {
+    font-size: 2em;
+  }
+  .content p {
+    font-size: 1.1em;
+    padding: 0;
+  }
+  nav ul li ul {
+    position: absolute;
+    width: 180px;
   }
 }
